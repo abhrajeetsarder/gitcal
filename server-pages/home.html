@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href=" {% static 'style-sharpner-2.0.css' %}">
+        <script src="{% static 'bakchoder.js' %}"></script>   
+        
+        <title>Home</title>
+    </head>
+    <body onLoad="disableClick()" >
+        <h1>Home</h1>
+        <h4>This site belongs to Abhrajeet Sarder!</h4>
+        <p>A Simple Adding Site</p>
+        <span id="ipaddress"></span>
+        <br>
+        <br>
+        <form name="myForm" id="myForm" onsubmit="return validateForm()" action="enter" method="post" required>
+            {% csrf_token %}
+            <input type="text" readonly id="value" onkeydown="event.preventDefault();callbackReturn(this)" name="inputs">
+            <input type="submit">
+        </form>
+        <br>
+        <br>
+        <form id="inputs">
+        <input type="button" id="1" value="1" onclick="onClickFunction(this)">
+        <input type="button" value="2" onclick="onClickFunction(this)">
+        <input type="button" value="3" onclick="onClickFunction(this)">
+        <input type="button" value="⌫" onclick="onClickFunction(this)">
+        <br>
+        <input type="button" value="4" onclick="onClickFunction(this)">
+        <input type="button" value="5" onclick="onClickFunction(this)">
+        <input type="button" value="6" onclick="onClickFunction(this)">
+        <input type="button" value="CL" onclick="onClickFunction(this)">
+        <br>
+        <input type="button" value="7" onclick="onClickFunction(this)">
+        <input type="button" value="8" onclick="onClickFunction(this)">
+        <input type="button" value="9" onclick="onClickFunction(this)">
+        <input type="button" id = "x" value="X" onclick="onClickFunction(this)">
+        <br>
+        
+        <input type="button" value="+" onclick="onClickFunction(this)">
+        <input type="button" value="0" onclick="onClickFunction(this)">
+        <input type="button" value="-" onclick="onClickFunction(this)">
+        <input type="button" value="÷" onclick="onClickFunction(this)">
+        </form>
+    <h4>{{result}}{{num}}</h4>
+    
+    </body>
+</html>

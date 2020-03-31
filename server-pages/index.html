@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <a href="index.html"><input type="button" value="Home" name="home" id="home"></a>
+    <h1>Hello {{name}}<h1>
+        
+    <form action="add" method="POST">
+        {% csrf_token %}
+        <p>Enter First Number {{name}} : </p><input type="number" name="n1" id="num">
+        <p>Enter Second Number {{name}} : </p><input type="number" name="n2" id="num1"><br>
+        <input type="radio" value="-" name="sign"> - <br>
+        <input type="radio" value="+" name="sign"> + <br>
+        
+        <input type="submit">
+        
+    </form>
+    {{type}} {{rslt}}
+        
+</body>
+</html>
