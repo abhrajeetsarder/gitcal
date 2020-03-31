@@ -2,4 +2,4 @@ Django
 dj-database-url
 dj-static
 gunicorn
-whitenoise
+whitenoise==3.2
